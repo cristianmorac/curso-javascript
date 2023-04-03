@@ -1,3 +1,6 @@
 https://www.youtube.com/watch?v=C4qsdeJ4SLk
 
-minuto: 1:11:42
+minuto: 2:01:52
+
+Ejercicios de practica
+projecteuler.net
