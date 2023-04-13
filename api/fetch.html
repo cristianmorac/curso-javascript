@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Mostrar la información del Json -->
+    <b>Nombre del post: </b> <span id="txtNombrePost"></span> <br>
+    <b>¿Está completo?</b> <span id="txtCompleto"></span>
+</body>
+<script>
+    /* LLamar una api */
+    function cargarJson(){
+        fetch("https://jsonplaceholder.typicode.com/todos/4")
+        // transformar a json
+        .then(response => response.json())
+        // cargar json a la función
+        .then(jsonCargado);
+    }
+
+    function jsonCargado(json){
+        // Acceder a la información
+        json.title
+        // mostrar la información en html
+        let spanNombrePost = document.getElementById("txtNombrePost");
+        spanNombrePost.innerHTML = json.title
+        let spantxtCompleto = document.getElementById("txtCompleto");
+        // Condicional true: Esta completo, false: esta incompleto
+        /* if (json.completed){
+            spantxtCompleto.innerText = "Esta completo";
+        }else{
+            spantxtCompleto.innerText = "Esta incompleto";
+        } */
+
+        // reducir el condicional anterior
+        spantxtCompleto.innerText = json.completed ? "Está completo" : "Está incompleto"
+        console.log(json)
+    }
+
+    cargarJson();
+</script>
+</html>
