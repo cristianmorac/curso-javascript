@@ -1,4 +1,11 @@
 /* Variables */
+
+/**
+ *? var = variables globales se puede declarar varias veces
+ *? let = no deja declarar la variable 2 veces y se declara localmente en funciones o script
+ *? const = constantes no se puede modificar
+*/
+
 var nombre = "Cristian";
 var edad = 30
 var mensaje_final = "Lorraine"+" y "+nombre

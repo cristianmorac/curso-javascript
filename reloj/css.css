@@ -1,0 +1,9 @@
+.reloj{
+    color: green;
+    font-size: 3em;
+    font-family: monospace;
+    text-align: center;
+  }
+  body{
+    background-color:black;
+  }

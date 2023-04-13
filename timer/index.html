@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* El tiempo esta en milisegundos */ 
+    let timmer1 = setTimeout(() => console.log("Tiempo cumplido"),3000)
+    console.log("timmer "+timmer1) // valor del id timer primero
+    /* Varios intervalos */
+    let timmer2 = setInterval(() => console.log('tiempo cumplido',1000))
+    console.log("timmer "+timmer2) // valor del id timer segundo
+
+    /* Dejar de correr el timer 
+    clearInterval(timmer2)*/
+
+    /* eliminar el timmer despues de un determinado tiempo */
+    setTimeout(()=>{
+        clearInterval(timmer2);
+    },10*1000)
+</script>
+</html>
